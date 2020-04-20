@@ -11,9 +11,7 @@ const getBrowser = async () => {
   // is a security hole
   console.log('Launching browser...');
 
-  browser = await puppeteer.launch({
-    args: ['--no-sandbox'],
-  });
+  browser = await puppeteer.launch();
 
   browser.on('disconnected', getBrowser);
 
